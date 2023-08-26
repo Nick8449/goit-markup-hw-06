@@ -1,0 +1,17 @@
+:root {
+  --transition-duration-time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --logo-font-family: 'Raleway', sans-serif;
+  --main-font-family: 'Roboto', sans-serif;
+  --iris: #4d5ae5;
+  --pressed-state-color: #404bbf;
+  --navyblue: #2e2f42;
+  --success-message-color: #31d0aa;
+  --slate: #434455;
+  --lightslate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navyblue-modal: rgba(46, 47, 66, 0.4);
+  --hero-background-color: rgba(46, 47, 66, 0.7);
+  --white: #ffffff;
+  --dairy: #fcfcfc;
+}

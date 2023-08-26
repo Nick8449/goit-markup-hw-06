@@ -1,0 +1,20 @@
+@media screen and (max-width: 1157px) {
+  .what-we-do {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .what-we-do {
+    padding-bottom: 120px;
+  }
+
+  .what-we-do-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .what-we-do-list-item {
+    width: calc((100% - 24px * 2) / 3);
+  }
+}

@@ -1,0 +1,242 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+
+  transition: opacity var(--transition-duration-time-function),
+    visibility var(--transition-duration-time-function);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  width: 100%;
+  max-width: 392px;
+  min-height: 584px;
+  padding: 72px 16px 24px 16px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  background-color: var(--dairy);
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-duration-time-function);
+}
+
+.user-feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  color: var(--navyblue);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.input-label-wrapper {
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--lightslate);
+}
+
+.modal-input-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--lightslate);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-radius: 4px;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  outline: transparent;
+  background-color: transparent;
+  transition: border-color var(--transition-duration-time-function);
+}
+
+.modal-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--navyblue);
+  transition: fill var(--transition-duration-time-function);
+}
+
+.modal-input:focus {
+  border-color: var(--iris);
+  outline: transparent;
+  outline-offset: 4px;
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: var(--iris);
+}
+
+.comment-label-wrapper {
+  margin-bottom: 16px;
+}
+
+.textarea {
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--navyblue-modal);
+}
+
+.textarea::placeholder {
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.48px;
+  color: var(--navyblue-modal);
+}
+
+.checkbox-container {
+  margin-bottom: 24px;
+}
+
+.modal-checkbox-label {
+  display: block;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.48px;
+  color: var(--lightslate);
+}
+
+.custom-checkbox-wrapper {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navyblue-modal);
+  border-radius: 2px;
+
+  transition: background-color var(--transition-duration-time-function),
+    border var(--transition-duration-time-function),
+    fill var(--transition-duration-time-function);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.modal-checkbox:checked + .modal-checkbox-label .custom-checkbox-wrapper {
+  border: none;
+  background-color: var(--pressed-state-color);
+  fill: var(--cloud);
+}
+
+.privacy-policy-link {
+  color: var(--iris);
+}
+
+.modal-submit-btn {
+  align-self: center;
+  min-width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+
+  border: none;
+  border-radius: 4px;
+  background: var(--iris, #4d5ae5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  color: var(--white);
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+
+  cursor: pointer;
+  transition: background-color var(--transition-duration-time-function);
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: var(--pressed-state-color);
+}
+
+/* ========== Modal window close button ========== */
+
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--cornflower);
+  border-radius: 50%;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+  transition: background-color var(--transition-duration-time-function),
+    border var(--transition-duration-time-function);
+}
+
+.close-button-icon {
+  fill: var(--navyblue);
+  transition: fill var(--transition-duration-time-function);
+}
+
+.close-button:hover,
+.close-button:focus {
+  background-color: var(--pressed-state-color);
+  border: none;
+}
+
+.close-button:hover .close-button-icon,
+.close-button:focus .close-button-icon {
+  fill: var(--white);
+}
+
+/* ========== Modal window close button ========== */
+
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
+}
